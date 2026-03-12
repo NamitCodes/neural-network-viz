@@ -8,16 +8,16 @@ A pure-frontend interactive tool for visualising how neural networks learn and m
 
 ## Features
 
-| Feature | Details |
-|---|---|
-| **Interactive data** | Left-click → Class A · Right-click → Class B |
-| **Configurable architecture** | 0–4 hidden layers · 1–8 neurons per layer |
-| **Activation functions** | ReLU · Sigmoid · Tanh · Linear |
-| **Live decision boundary** | 110×110 grid updated in real time |
-| **Weight/bias sliders** | Manual control of every parameter |
-| **Gradient descent** | Full backprop with configurable LR & steps/frame |
-| **Network diagram** | Neurons coloured by activation · connections by weight sign |
-| **Loss chart** | Running cross-entropy loss history |
+| Feature                       | Details                                                     |
+| ----------------------------- | ----------------------------------------------------------- |
+| **Interactive data**          | Left-click → Class A · Right-click → Class B                |
+| **Configurable architecture** | 0–4 hidden layers · 1–8 neurons per layer                   |
+| **Activation functions**      | ReLU · Sigmoid · Tanh · Linear                              |
+| **Live decision boundary**    | 110×110 grid updated in real time                           |
+| **Weight/bias sliders**       | Manual control of every parameter                           |
+| **Gradient descent**          | Full backprop with configurable LR & steps/frame            |
+| **Network diagram**           | Neurons coloured by activation · connections by weight sign |
+| **Loss chart**                | Running cross-entropy loss history                          |
 
 ---
 
@@ -26,11 +26,9 @@ A pure-frontend interactive tool for visualising how neural networks learn and m
 ```
 neural-net-viz/
 ├── index.html          ← entry point (open this)
-├── css/
-│   └── style.css       ← dark cyberpunk lab theme
-├── js/
-│   ├── nn.js           ← pure-JS neural network (no dependencies)
-│   └── app.js          ← canvas rendering & UI logic
+├── style.css       ← dark cyberpunk lab theme
+├── nn.js           ← pure-JS neural network (no dependencies)
+├── app.js          ← canvas rendering & UI logic
 └── README.md
 ```
 
@@ -56,7 +54,7 @@ npx serve .
 
 1. Push this folder to a GitHub repository.
 2. Go to **Settings → Pages**.
-3. Under *Source*, select **Deploy from a branch** → `main` → `/ (root)`.
+3. Under _Source_, select **Deploy from a branch** → `main` → `/ (root)`.
 4. Save. Your app will be live at `https://<username>.github.io/<repo>/` within ~60 seconds.
 
 ---
@@ -95,20 +93,24 @@ Or drag-and-drop the folder at [app.netlify.com/drop](https://app.netlify.com/dr
 ## How to Use
 
 ### 1 — Add data
+
 - **Left-click** on the plot canvas to place a **Class A** point (green).
 - **Right-click** to place a **Class B** point (pink).
 
 ### 2 — Configure the network
+
 - Adjust **Hidden Layers** and **Neurons / Layer** sliders.
 - Pick an **Activation Function**.
 - Click **⟳ Rebuild Network** to apply changes.
 
 ### 3 — Train
+
 - Click **▶ Train** to run gradient descent and watch the decision boundary animate.
 - Click **⏸ Pause** to stop.
 - Use **Step ×1** to advance one epoch at a time.
 
 ### 4 — Explore weights manually
+
 - Scroll down to the **Weights & Biases** panel.
 - Drag any slider to modify a weight or bias directly and watch the boundary update instantly.
 - Click **Randomize** to reinitialise all weights randomly.
